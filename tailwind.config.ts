@@ -11,6 +11,12 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "sidebar-background": "#171D1F",
+        "card-post-section-background": "#171D1F",
+        "card-post-section-foreground": "#888888",
+      },
+      width: {
+        "card-post-width": "1000px",
       },
     },
   },
