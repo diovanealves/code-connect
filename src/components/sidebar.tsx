@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function Sidebar() {
   return (
-    <aside className="h-full w-full max-w-36 rounded-lg bg-sidebar-background px-7 py-8">
+    <aside className="h-full w-full max-w-32 rounded-lg bg-sidebar-background px-7 py-8">
       <Link href={"/"}>
         <Image
           src="/logo.png"

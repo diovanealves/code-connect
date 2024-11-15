@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Prompt } from "next/font/google";
 import "./globals.css";
 
+import SearchForm from "@/components/search-form";
 import { Sidebar } from "@/components/sidebar";
 
 export const metadata: Metadata = {
@@ -23,10 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`mx-auto flex max-w-7xl flex-row items-center justify-center gap-7 py-6 antialiased ${prompt.className}`}
+        className={`mx-auto flex w-[95%] max-w-7xl flex-row items-center justify-center gap-7 py-6 antialiased ${prompt.className}`}
       >
         <Sidebar />
-        <div className="h-full">{children}</div>
+        <div className="flex h-full w-full flex-col overflow-hidden">
+          <SearchForm />
+          <div className="no-scrollbar flex-1 overflow-y-auto">{children}</div>
+        </div>
       </body>
     </html>
   );
